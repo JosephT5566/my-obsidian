@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AGENTS.md",
+                "file": "Row notes/2026-05-17 - 5-17 weekly update.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AGENTS"
+              "title": "2026-05-17 - 5-17 weekly update"
             }
           }
         ],
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AGENTS.md",
+                "file": "Row notes/2026-05-17 - 5-17 weekly update.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "AGENTS 的反向連結"
+              "title": "2026-05-17 - 5-17 weekly update 的反向連結"
             }
           },
           {
@@ -128,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AGENTS.md",
+                "file": "Row notes/2026-05-17 - 5-17 weekly update.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "AGENTS 的對外連結"
+              "title": "2026-05-17 - 5-17 weekly update 的對外連結"
             }
           },
           {
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AGENTS.md",
+                "file": "Row notes/2026-05-17 - 5-17 weekly update.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "AGENTS 的大綱"
+              "title": "2026-05-17 - 5-17 weekly update 的大綱"
             }
           }
         ]
@@ -200,21 +200,34 @@
   },
   "active": "9e4aac205d42e03c",
   "lastOpenFiles": [
+    "Row notes/2026-05-10 - 5-10 weekly updates.md",
+    "Row notes/2026-04-30 - Dynamic programming.md",
+    "Row notes/2026-04-27 - 4-27 進辦公室.md",
+    "My Wiki/SQL vs NoSQL.md",
+    "My Wiki/Dynamic Programming.md",
+    "My Wiki/Expense Receipt AI Pipeline.md",
+    "My Wiki/Distributed Transactions - 2PC and Saga.md",
+    "My Wiki/Back-of-the-envelope Estimation.md",
+    "My Wiki/AI Agent Architecture.md",
+    "AGENTS.md",
+    "My Wiki/Remote Codex with Self-hosted Runner.md",
+    "My Wiki/System Design Foundations.md",
+    "My Wiki/Firebase Realtime App Architecture.md",
+    "My Wiki/Interview Preparation with AI.md",
+    "My Wiki/Trie.md",
+    "My Wiki/Graph Traversal - DFS and BFS.md",
+    "Row notes/2026-07-12 - 7-12 weekly update.md",
+    "Row notes/2026-06-14 - 6-14 weekly update.md",
+    "Row notes/2026-06-07 - 6-7 weekly update.md",
+    "Row notes/2026-05-31 - 5-31 weekly update.md",
+    "Row notes/2026-05-24 - 5-24 weekly update.md",
+    "Row notes/2026-05-17 - 5-17 weekly update.md",
     "Index.md",
     "Templates/Learning Note.md",
     "Templates/Decision Record.md",
     "Templates/Tool or Library.md",
-    "Templates/Code Snippet.md",
-    "Templates/Troubleshooting.md",
-    "Templates/How-To.md",
-    "Templates/Concept.md",
-    "雙向連結.md",
-    "AGENTS.md",
     "Row notes",
-    "未命名.md",
     "Templates",
-    "My Wiki",
-    "Dialog.md",
-    "目錄.md"
+    "My Wiki"
   ]
 }
