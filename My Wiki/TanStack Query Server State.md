@@ -33,6 +33,7 @@ queryClient.invalidateQueries({ queryKey: ['user'] });
 ## Related
 
 - [[OAuth for Browser Apps]]
+- [[Expense App Authentication]]
 - [[React Ref Composition]]
 - [[3D Product Conversion Workflow]]
 - [[Jukwaa]]

@@ -3,8 +3,11 @@
 ## Side Projects
 
 - [[Side Projects]] — 個人專案的總覽，將產品脈絡、Architecture Decision 與可重用技術頁分開並交互連結。
-  - [[Expense App]] — 支出管理 App 的功能、UI 演進，以及 Receipt AI 子系統的專案入口。
+  - [[Expense App]] — 支出管理 App 的功能、Authentication、UI 演進與 Receipt AI 子系統入口。
+    - [[Expense App Authentication]] — Supabase Auth 負責登入與 session，GCF AI endpoint 透過 Supabase JWKS 驗證 Access Token 的責任分界。
     - [[Expense Receipt AI Pipeline]] — Expense App 的收據圖片 Upload、AI Analysis 與 Summary pipeline。
+  - [[Travel Split App]] — 旅行費用分帳 App，以及 Cloudflare、Google OAuth、GAS／GCF 與 Google Sheets 的 authentication architecture。
+    - [[Travel Split Backend Migration]] — 為解決 full-proxy latency，從 Cloudflare proxy + Workers KV + GAS 遷移到 token issuer + cookie + GCF verification。
   - [[Wedding Table Service]] — 婚禮現場多裝置報到 App 的目標、限制與技術選擇。
     - [[Firebase Realtime App Architecture]] — Wedding Table Service 採用 Firebase Hosting、Firestore、Authentication 與 Realtime listener 的架構決策。
 
@@ -53,12 +56,12 @@
 - [[Service Routing and Load Balancing]] — 整理 ELB、target group、traffic pool 與 application/infra route ownership。
 - [[Webhook Architecture]] — 說明 event push、輕量前置層、n8n、驗證、重試與 idempotency。
 - [[Kubernetes Architecture and Debugging]] — 串起 Cluster、Node Pool、Pod、Deployment、Service、DNS、rollout 與 debug。
-- [[Google Cloud Functions]] — Expense App 用來驗證 JWT、建立 GCS Signed URL 與呼叫 AI API 的 serverless backend。
+- [[Google Cloud Functions]] — Travel Split 驗證 Cloudflare-issued credential、Expense App 驗證 Supabase JWT 並承接 AI operations 的 serverless backend。
 - [[Google Cloud Storage]] — 以短效 Signed URL 讓 Client 直接上傳待分析收據圖片的 Object Storage。
 
 ## Security and Identity
 
-- [[OAuth for Browser Apps]] — 區分 ID/Access/Refresh Token，並整理 Google Identity、PKCE 與 OAuth proxy。
+- [[OAuth for Browser Apps]] — 區分 authentication、application session 與 delegated API authorization，並整理 Browser token models 與安全邊界。
 - [[Supabase JWKS]] — 用公開 JWKS key 驗證 Supabase asymmetric JWT，避免讓驗證端持有 signing secret。
 
 ## Product and Experimentation

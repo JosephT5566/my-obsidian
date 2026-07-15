@@ -16,7 +16,7 @@
 |---|---|---|---|---|
 | `Row notes/2026-04-27 - 4-27 進辦公室.md` | `1d027528e177a39dff10f2bd81ebbeefdb4898efeb19e5a202681583dd89ce28` | 2026-07-14 | imported | [[Graph Traversal - DFS and BFS]] |
 | `Row notes/2026-04-30 - Dynamic programming.md` | `5c1cad825de6ef1be174a2df7b654145c501c81f267592a458fada3335de50e2` | 2026-07-14 | imported | [[Dynamic Programming]] |
-| `Row notes/2026-05-10 - 5-10 weekly updates.md` | `8d48291e0924c4b89b5b1308b8a483c79b87f83cbca9db84186970a329f6ecc2` | 2026-07-15 | imported | [[Expense App]], [[Expense Receipt AI Pipeline]], [[Google Cloud Functions]], [[Google Cloud Storage]], [[Supabase]], [[Supabase JWKS]] |
+| `Row notes/2026-05-10 - 5-10 weekly updates.md` | `8d48291e0924c4b89b5b1308b8a483c79b87f83cbca9db84186970a329f6ecc2` | 2026-07-16 | imported | [[Travel Split App]], [[Travel Split Backend Migration]], [[Expense App]], [[Expense App Authentication]], [[Expense Receipt AI Pipeline]], [[Google Cloud Functions]], [[Google Cloud Storage]], [[Supabase]], [[Supabase JWKS]] |
 | `Row notes/2026-05-17 - 5-17 weekly update.md` | `62d52884287334657a0e428c6a6de5187fb5b1b4d4b6923031f8bd11f47c71eb` | 2026-07-15 | imported | [[Expense App]], [[Expense Receipt AI Pipeline]] |
 | `Row notes/2026-05-24 - 5-24 weekly update.md` | `c50d149fda923c9da07b4f541b3a4ac9726e230644d071406fe5bf9025ec47ed` | 2026-07-14 | imported | [[Trie]], [[AI Agent Architecture]], [[Distributed Transactions - 2PC and Saga]] |
 | `Row notes/2026-05-31 - 5-31 weekly update.md` | `45fe5988ac34e2c2376b67f91aa64080e99145917bc361319f9419e66b08a12c` | 2026-07-14 | imported | [[Graph Traversal - DFS and BFS]], [[Interview Preparation with AI]] |
@@ -49,7 +49,7 @@
 | `Row notes/2025-06-03 - Set new route.md` | `63f039976093b3cea67e2ecd5039469179af5e76a672fa2f638d7ee464b3549e` | 2026-07-14 | imported | [[Prismic CMS Development]], [[Service Routing and Load Balancing]] |
 | `Row notes/2025-06-15 - Webhook.md` | `380eb5949da64fbb9da4bc02718dc54c01b127bd21d9f5fdd7a5efa60b359977` | 2026-07-14 | imported | [[Webhook Architecture]] |
 | `Row notes/2025-10-09 - 3D Clipper.md` | `f9cb65645680d356ac5e6450d703bf5dfa57575b036c040e20a89548880dee7d` | 2026-07-15 | imported | [[Houzz Marketplace]], [[3D Product Conversion Workflow]] |
-| `Row notes/2025-10-29 - Oauth.md` | `5807dfcb00d953caede0b096f5f296ed904c7ca3569ddf55afe9da66774531b6` | 2026-07-15 | imported | [[OAuth for Browser Apps]], [[Supabase]] |
+| `Row notes/2025-10-29 - Oauth.md` | `5807dfcb00d953caede0b096f5f296ed904c7ca3569ddf55afe9da66774531b6` | 2026-07-16 | imported | [[Expense App Authentication]], [[OAuth for Browser Apps]], [[Supabase]] |
 | `Row notes/2025-12-10 - Converted model.md` | `c8a049cce6d20ef3045a824a08475516e2dcace6fa2160425e047756417e8f61` | 2026-07-15 | imported | [[Houzz Marketplace]], [[3D Product Conversion Workflow]] |
 | `Row notes/2025-12-19 - Houzz K8S.md` | `e32a6b3474536598f6803b0f59fbc98e33863997c59ac534d6bbe53f9ccf77f1` | 2026-07-14 | imported | [[Kubernetes Architecture and Debugging]] |
 | `Row notes/2026-01-09 - React query.md` | `3bb034d511b45699342aefee1283c371dece16a2af50ca228d6297fb29425842` | 2026-07-14 | imported | [[TanStack Query Server State]] |

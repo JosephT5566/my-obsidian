@@ -15,7 +15,11 @@ created: "2026-07-15"
 
 ### [[Expense App]]
 
-管理支出、搜尋紀錄與分攤資料的 App。收據辨識功能的實作與取捨記錄在 [[Expense Receipt AI Pipeline]]，並串接 [[Google Cloud Functions]]、[[Google Cloud Storage]] 與 [[Supabase]]。
+管理支出、搜尋紀錄與分攤資料的 App。[[Supabase]] Auth 管理登入、session 與 token issuance，RLS 保護 database；[[Google Cloud Functions]] 提供 [[Expense Receipt AI Pipeline|Receipt AI endpoints]]，並透過 [[Supabase JWKS]] 驗證 caller。責任分界記錄在 [[Expense App Authentication]]。
+
+### [[Travel Split App]]
+
+旅行費用分帳 App。[[Travel Split Backend Migration]] 記錄從 Cloudflare full proxy + Workers KV + GAS，遷移到 Cloudflare token issuer + HttpOnly／Secure cookie + [[Google Cloud Functions|GCF]] verification 的過程，主要目的是移除每一筆 request 都繞過 proxy 的延遲。
 
 ### [[Wedding Table Service]]
 
@@ -31,5 +35,6 @@ created: "2026-07-15"
 ## Related
 
 - [[Expense App]]
+- [[Travel Split App]]
 - [[Wedding Table Service]]
 - [[System Design Foundations]]

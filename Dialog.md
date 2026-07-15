@@ -8,3 +8,7 @@
 ## [2026-07-15] 更新知識組織規則 | 在 AGENTS.md 加入 Side Project、Subsystem／Decision 與 Reusable technology 的分層方式，並要求正文語意連結、雙向案例連結及 Index 巢狀導覽。
 ## [2026-07-15] 重整 Houzz Engineering | 建立 Houzz、C2、Jukwaa 與 Houzz Marketplace 導覽頁；將 C2／Jukwaa／Marketplace workflows 納入分層 Index，並補強相關文章與 Kubernetes、Thrift、Redis、Airflow、Frontend technologies 的正文交互連結。
 ## [2026-07-15] 維護來源連結與 Obsidian 設定 | 將 OAuth for Browser Apps 的來源改為 wikilink；新增 .gitignore，停止追蹤 graph 與 workspace 等本機 UI state。
+## [2026-07-16] 重整 Expense App Authentication | 從 OAuth 原始筆記拆出 Expense App Authentication decision，重寫 OAuth for Browser Apps 的 token／session 邊界，校正 Supabase session lifetime，並補強 Supabase、JWKS、GCF、Receipt AI 與 TanStack Query 的正文交互連結。
+## [2026-07-16] 補匯入 Travel Split | 從 2026-05-10 - 5-10 weekly updates.md 補建 Travel Split App 與 Travel Split Backend Migration，記錄 GAS → GCF、Cloudflare token issuer 與 HttpOnly／Secure cookie boundary，並更新相關技術頁與 Index.md。
+## [2026-07-16] 初步校正 Side Project Auth Architecture | 依使用者說明區分 Expense App 與 Travel Split，當時誤判 Expense GCF 未採用 JWKS；同時補全 Travel Split 從 Cloudflare full proxy／Workers KV／GAS 遷移到 token issuer／cookie／GCF verification 的 Before／After flow，Expense 部分由下一筆紀錄再校正。
+## [2026-07-16] 再校正 Expense AI Authentication | 依 private google-ai-gcf/main.py 確認 Expense App 由 Supabase Auth 發行 session token，GCF 的 get_upload_url 與 analyze_receipt 透過 Supabase JWKS 驗證 Bearer JWT；同步更新 Expense App、Receipt AI、GCF、Supabase、JWKS、OAuth、Side Projects 與 Index，並記錄 RS256 註解／ES256 實作不一致及 object-path authorization follow-up。
