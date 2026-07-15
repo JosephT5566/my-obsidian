@@ -1,7 +1,7 @@
 ---
 type: code-snippet
 language: javascript
-topics: [react, refs, hooks]
+topics: [houzz, jukwaa, react, refs, hooks]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Purpose
 
-讓 component 同時保留內部 ref 並接收 parent 經 `forwardRef` 傳入的 ref，且不違反 Hooks 不可條件式呼叫的規則。
+讓 [[Jukwaa]] 等 React codebase 中的 component 同時保留內部 ref，並接收 parent 經 `forwardRef` 傳入的 ref，且不違反 Hooks 不可條件式呼叫的規則。
 
 ## Code
 
@@ -40,6 +40,7 @@ const SimpleProductCard = React.forwardRef((props, forwardedRef) => {
 
 - [[TanStack Query Server State]]
 - [[Intersection Observer]]
+- [[Jukwaa]]
 
 ## References
 

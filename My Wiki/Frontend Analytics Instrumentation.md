@@ -1,7 +1,7 @@
 ---
 type: how-to
 status: growing
-topics: [analytics, event-tracking, frontend]
+topics: [houzz, jukwaa, analytics, event-tracking, frontend]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Goal
 
-以一致的 hierarchy 與 naming 設計 UI click/impression events，讓 Amplitude 等分析工具可穩定查詢。
+在 [[Jukwaa]]／[[Houzz Marketplace]] 等 frontend surfaces，以一致的 hierarchy 與 naming 設計 UI click／impression events，讓 Amplitude 等分析工具可穩定查詢。Visibility event 的觸發機制可搭配 [[Intersection Observer]]，但仍要另外定義停留時間與重複曝光規則。
 
 ## Steps
 
@@ -31,6 +31,8 @@ created: "2026-07-14"
 
 - [[Intersection Observer]]
 - [[A-B Testing Rollout]]
+- [[Jukwaa]]
+- [[Houzz Marketplace]]
 
 ## References
 

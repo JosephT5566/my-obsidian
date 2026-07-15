@@ -1,7 +1,7 @@
 ---
 type: how-to
 status: growing
-topics: [batch, database, migration]
+topics: [houzz, c2, batch, database, migration]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Goal
 
-安全測試 batch job，並以可追蹤的 schema migration 更新資料庫結構。
+在 [[Houzz]]／[[C2]] 環境安全測試 batch job，並以可追蹤的 schema migration 更新資料庫結構。若工作變成具有 scheduling 與跨步驟依賴的 data workflow，應另外評估 [[Airflow Data Pipelines]]。
 
 ## Steps
 
@@ -37,6 +37,8 @@ created: "2026-07-14"
 - [[Airflow Data Pipelines]]
 - [[SQL vs NoSQL]]
 - [[Email Template Testing]]
+- [[C2]]
+- [[Houzz]]
 
 ## References
 

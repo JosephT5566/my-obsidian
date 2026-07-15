@@ -1,7 +1,7 @@
 ---
 type: concept
 status: growing
-topics: [react, tanstack-query, cache, server-state]
+topics: [houzz, jukwaa, react, tanstack-query, cache, server-state]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Summary
 
-TanStack Query（原 React Query）管理 server state 的 fetching、cache、loading/error、background refetch 與同步。它不是一般 global state store；cache 是否需要持久化與 authentication session 如何續期，必須分開設計。
+TanStack Query（原 React Query）管理 server state 的 fetching、cache、loading／error、background refetch 與同步。它可用於 [[Jukwaa]] 或 [[Houzz Marketplace]] 的 React workflows，例如 [[3D Product Conversion Workflow]] 的 model lists；它不是一般 global state store，cache persistence 與 authentication session 續期必須分開設計。
 
 ## How It Works
 
@@ -35,6 +35,8 @@ queryClient.invalidateQueries({ queryKey: ['user'] });
 - [[OAuth for Browser Apps]]
 - [[React Ref Composition]]
 - [[3D Product Conversion Workflow]]
+- [[Jukwaa]]
+- [[Houzz Marketplace]]
 
 ## References
 

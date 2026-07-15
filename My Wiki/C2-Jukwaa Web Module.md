@@ -1,7 +1,7 @@
 ---
 type: concept
 status: growing
-topics: [c2, jukwaa, react, graphql]
+topics: [houzz, c2, jukwaa, react, graphql]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Summary
 
-Web Module 讓 legacy C2 page 嵌入由 Jukwaa 提供的 React UI。C2 用 AJAX request 請求 module，Jukwaa handler/fetcher 經 GraphQL 與 Thrift 取得資料後，回傳可渲染的 component bundle。
+Web Module 讓 legacy [[C2]] page 嵌入由 [[Jukwaa]] 提供的 React UI。C2 用 AJAX request 請求 module，Jukwaa handler／fetcher 經 GraphQL 與 [[Apache Thrift RPC|Thrift]] 取得資料後，回傳可渲染的 component bundle。
 
 ## How It Works
 
@@ -22,7 +22,7 @@ C2 page
   → Jukwaa store and React component
 ```
 
-以 Profile Header 新增 tab 為例，需要一起追蹤：C2 page 設定的 `currentTab`、web module request、Jukwaa handler、GraphQL variable/schema、C2 Navigation service、Thrift enum/contract 與 React store。只修改 response 內容，不會自動讓 selected state 正確。
+以 Profile Header 新增 tab 為例，需要一起追蹤：C2 page 設定的 `currentTab`、Web Module request、Jukwaa handler、GraphQL variable/schema、C2 Navigation service、Thrift enum／contract 與 React store。完整環境操作可參考 [[C2 Development on Kubernetes]]；只修改 response 內容，不會自動讓 selected state 正確。
 
 ## Tradeoffs
 
@@ -34,6 +34,9 @@ C2 page
 - [[Apache Thrift RPC]]
 - [[C2 Development on Kubernetes]]
 - [[Prismic CMS Development]]
+- [[C2]]
+- [[Jukwaa]]
+- [[Houzz]]
 
 ## References
 

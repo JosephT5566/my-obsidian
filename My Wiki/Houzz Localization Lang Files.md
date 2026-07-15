@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Goal
 
-建立符合 Houzz L10n pipeline 的 lang file，確保 `_author` 與 `_id` 都存在。
+建立符合 [[Houzz]] L10n pipeline 的 lang file，確保 `_author` 與 `_id` 都存在。這類 lang file 會由 [[Jukwaa]] 等 JavaScript modules import，再交給 Webpack lang-loader 處理。
 
 ## Steps
 
@@ -28,6 +28,8 @@ created: "2026-07-14"
 
 - [[C2-Jukwaa Web Module]]
 - [[Web Rendering Best Practices]]
+- [[Jukwaa]]
+- [[Houzz]]
 
 ## References
 

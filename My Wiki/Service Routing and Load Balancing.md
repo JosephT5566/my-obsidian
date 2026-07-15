@@ -1,7 +1,7 @@
 ---
 type: concept
 status: growing
-topics: [load-balancing, routing, elb, microservices]
+topics: [houzz, load-balancing, routing, elb, microservices]
 created: "2026-07-14"
 ---
 
@@ -19,7 +19,7 @@ Client → API/GraphQL service → ELB → Target Group → EC2 or Kubernetes Po
 
 Routing ownership 應放在 service/config/infra layer，而不是讓 GraphQL resolver 直接知道底層 ELB。需要新的 traffic pool 時，常見做法是由既有 wrapper service 根據 pool 選 endpoint，或在 service registry 中加入明確 abstraction。
 
-Route path 的完整啟用通常有三層：application AppConfig、local reverse proxy（僅本機需要）、staging/production load balancer configuration。
+在 [[Houzz]] 的 [[Jukwaa]]／Prismic route 使用案例中，Route path 的完整啟用通常有三層：application AppConfig、local reverse proxy（僅本機需要）、staging／production load balancer configuration。底層 targets 若由 Pods 提供，則會接到 [[Kubernetes Architecture and Debugging]] 的 Service 與 Deployment model。
 
 ## Tradeoffs
 
@@ -31,6 +31,8 @@ Route path 的完整啟用通常有三層：application AppConfig、local revers
 - [[Kubernetes Architecture and Debugging]]
 - [[Prismic CMS Development]]
 - [[System Design Foundations]]
+- [[Houzz]]
+- [[Jukwaa]]
 
 ## References
 

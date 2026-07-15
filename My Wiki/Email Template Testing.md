@@ -1,7 +1,7 @@
 ---
 type: how-to
 status: growing
-topics: [email, testing, rq-worker]
+topics: [houzz, c2, email, testing, rq-worker]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Goal
 
-在 staging RQ debug pod 修改 C2 email template，使用測試 script 或 Manage Order 發送測試信。
+在 staging RQ debug pod 修改 [[C2]] email template，使用測試 script 或 Manage Order 發送測試信。Pod attachment 與 cluster context 可沿用 [[C2 Development on Kubernetes]] 的操作方式。
 
 ## Steps
 
@@ -29,6 +29,8 @@ created: "2026-07-14"
 
 - [[C2 Development on Kubernetes]]
 - [[Batch Jobs and Database Migrations]]
+- [[C2]]
+- [[Houzz]]
 
 ## References
 

@@ -34,13 +34,25 @@
 - 接著讀取「Index.md」，了解目前已有哪些知識。
 	- 如果新資料是關於已存在的知識或內容，請更新原本的頁面，不要重複建立新頁面。
 	- 如果新資料內有出現新的重要知識或內容，才建立新頁面。	
+- 整理 Side Project 相關資料時，請區分以下三個層級，並用[[雙向連結]]互相連接：
+	- Project overview：記錄專案目標、功能範圍、限制、演進與整體 Architecture map。
+	- Subsystem、Workflow 或 Decision Record：記錄專案內特定功能的流程、選項、決策與後果。
+	- Reusable technology：將 Tool、Library、Protocol、Platform 或技術概念整理成獨立頁面，使其能被不同專案重用。
+	- 建議的導覽關係為：Side Projects → Project overview → Subsystem／Decision → Reusable technology。這是知識關係，不代表需要建立實體子資料夾；My Wiki 仍維持扁平式資料夾結構。
+	- Project overview 應連到主要 Subsystem 與使用的技術；Subsystem／Decision 頁應連回所屬專案；技術頁應連回至少一個實際使用案例。
+	- 建立 Project overview 時，在尚未提供專用範本前，使用最接近的 Concept 範本，並依專案內容調整段落。
+- `Index.md` 可以使用巢狀項目表達 Project → Subsystem 的階層；每個巢狀項目仍須符合「連結 + 一句話說明」的格式。可重用技術頁也應列在相對應的技術分類中，讓使用者能同時從專案與技術兩條路徑找到內容。
 - 在新增或更新知識內容時，專業的用詞請以英文為優先
 - 在新增知識內容時，請優先採用 /Templates 資料夾中最符合內容用途的格式。
 	- 每篇筆記只使用一個主要範本。
 	- 建立筆記時，必須取代範本中的預留內容，並移除不適用的空白段落。
 	- `type` 使用範本預設值；`status`、`topics`、`technology`、`language` 和 `source` 應依實際內容填寫。
 	- `Related` 內的空白 `[[]]` 必須替換為至少一個實際相關頁面。
-- 每個新頁面都要使用[[雙向連結]]至少連到一個相關頁面，避免變成孤立筆記。建立時請評估相關用詞
+- 每個新頁面都要使用[[雙向連結]]至少連到一個相關頁面，避免變成孤立筆記。建立時請評估相關用詞。
+- 關鍵專案、Subsystem、Tool、Platform 或 Concept 第一次出現在正文時，應直接使用[[雙向連結]]或帶 Alias 的連結（例如 `[[Google Cloud Functions|GCF]]`），不能只在 `Related` 段落列出連結。
+	- `Related` 用來補充相關頁面，不能取代正文中的語意連結。
+	- 連結應反映實際關係，例如「uses」、「belongs to」、「depends on」或「is an example of」，避免只為增加連結數量而加入弱關聯。
+	- 建立新的技術頁前，先檢查是否已有相同或高度相似頁面；內容不足以獨立說明或重用時，先保留在專案或 Subsystem 頁面，避免過度切碎。
 - 撰寫時請根據來源的語言來修改，但建立[[雙向連結]]時，請考慮評估使用既有的相關頁面，並將連結文字調整成合適內容。
 	- 中文的內容請使用簡單流暢的白話寫作風格，不要使用文言文或艱深的詞彙。
 - 每次資料整理完成後，你必須執行以下兩個任務

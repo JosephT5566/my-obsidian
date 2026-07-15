@@ -1,7 +1,7 @@
 ---
 type: how-to
 status: growing
-topics: [cms, prismic, graphql, routing]
+topics: [houzz, jukwaa, cms, prismic, graphql, routing]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Goal
 
-在 Prismic CMS 新增 document type、slice 或 route，並從 GraphQL 到 Jukwaa page 完成驗證。
+在 Prismic CMS 新增 document type、slice 或 route，並從 GraphQL 到 [[Jukwaa]] page 完成驗證。[[Houzz Marketplace]] 的 Guide page 是其中一種使用案例。
 
 ## Prerequisites
 
@@ -21,10 +21,10 @@ created: "2026-07-14"
 1. 在 staging 建立或修改 Type、Doc 與 Slice fields。
 2. 為 document 設定 data fetcher 與 GraphQL schema，包含 primary part 與 bodies。
 3. 執行 `npm run build-fragment`，更新 slice fragments 與 mapping。
-4. 在 Jukwaa/Prismic template 實作對應 component，先用 staging playground 驗證 schema 與 data。
+4. 在 Jukwaa／Prismic template 實作對應 component，先用 staging playground 驗證 schema 與 data。
 5. 在 AppConfig 加入 route mapping。
 6. Local 若需該 route，更新 nginx config 後重啟 local environment；否則直接在 staging 驗證。
-7. 正式 routing change 透過 load balancer change process 更新 staging，再完成 production change。
+7. 正式 routing change 依 [[Service Routing and Load Balancing]] 的 application、proxy 與 load balancer layers 更新 staging，再完成 production change。
 
 ## Troubleshooting
 
@@ -37,6 +37,8 @@ created: "2026-07-14"
 - [[C2-Jukwaa Web Module]]
 - [[Service Routing and Load Balancing]]
 - [[Marketplace Growth Experiments]]
+- [[Jukwaa]]
+- [[Houzz Marketplace]]
 
 ## References
 

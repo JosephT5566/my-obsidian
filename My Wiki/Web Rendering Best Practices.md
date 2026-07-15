@@ -1,7 +1,7 @@
 ---
 type: concept
 status: growing
-topics: [web-performance, images, seo, links]
+topics: [houzz, jukwaa, marketplace, web-performance, images, seo, links]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Summary
 
-圖片與連結的 markup 會直接影響 Layout Stability、loading cost、accessibility 與 SEO。核心原則是預先保留圖片空間、只延後非關鍵圖片、輸出正確尺寸與格式，並依目的地設定 link attributes。
+圖片與連結的 markup 會直接影響 Layout Stability、loading cost、accessibility 與 SEO。這些原則可重用於 [[Jukwaa]] 與 [[Houzz Marketplace]] pages：預先保留圖片空間、只延後非關鍵圖片、輸出正確尺寸與格式，並依目的地設定 link attributes。
 
 ## How It Works
 
@@ -19,7 +19,7 @@ created: "2026-07-14"
 - 非首屏圖片使用 `loading="lazy"`；內容圖片提供有意義的 `alt`，裝飾圖才使用空字串。
 - 依 viewport 與 device pixel ratio 輸出合理尺寸，不要要求超過原圖的解析度。
 - 照片優先使用 JPEG；主要是文字的視覺應盡量以 HTML/CSS 呈現。
-- Houzz `fimg` 適合依 URL parameters 動態產生 thumbnail；`simg` 適合既有高解析尺寸。
+- [[Houzz]] `fimg` 適合依 URL parameters 動態產生 thumbnail；`simg` 適合既有高解析尺寸。
 
 ```html
 <img src="photo.jpg" width="800" height="600" loading="lazy" alt="產品正面照">
@@ -39,6 +39,8 @@ Lazy loading 用在首屏主圖可能延後 Largest Contentful Paint。圖片 UR
 
 - [[Intersection Observer]]
 - [[System Design Foundations]]
+- [[Jukwaa]]
+- [[Houzz Marketplace]]
 
 ## References
 

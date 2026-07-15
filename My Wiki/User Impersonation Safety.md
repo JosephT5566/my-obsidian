@@ -1,7 +1,7 @@
 ---
 type: how-to
 status: growing
-topics: [authentication, debugging, user-safety]
+topics: [houzz, c2, authentication, debugging, user-safety]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Goal
 
-以最小風險檢查特定使用者看到的 UI 或權限狀態。
+以最小風險檢查特定使用者在 [[Houzz]]／[[C2]] UI 看到的權限或資料狀態。
 
 ## Prerequisites
 
@@ -33,6 +33,8 @@ created: "2026-07-14"
 
 - [[OAuth for Browser Apps]]
 - [[C2 Development on Kubernetes]]
+- [[C2]]
+- [[Houzz]]
 
 ## References
 

@@ -2,21 +2,21 @@
 type: decision-record
 status: accepted
 decision-date: "2026-06-07"
-topics: [firebase, firestore, realtime, architecture]
+topics: [side-project, wedding, firebase, firestore, realtime, architecture]
 ---
 
 # Firebase Realtime App Architecture
 
 ## Context
 
-婚禮報到 App 需要快速上線、支援多台裝置、Google sign-in 與即時同步出席狀態。原始構想是 GitHub Pages、Google Sheets 與 Google Apps Script，再以 Polling 或 Webhook 同步。
+[[Wedding Table Service]] 需要快速上線、支援多台裝置、Google sign-in 與即時同步出席狀態。原始構想是 GitHub Pages、Google Sheets 與 Google Apps Script，再以 Polling 或 [[Webhook Architecture|Webhook]] 同步。
 
 ## Options Considered
 
 ### Google Sheets + Google Apps Script
 
 - 能沿用熟悉的試算表與簡單 API。
-- 多裝置同步需要額外設計 Polling 或 Webhook。
+- 多裝置同步需要額外設計 Polling 或 [[Webhook Architecture|Webhook]]。
 - Auth、Hosting 與同步機制分散在不同服務。
 
 ### Firebase Hosting + Firestore + Firebase Authentication
@@ -34,7 +34,7 @@ topics: [firebase, firestore, realtime, architecture]
 
 - 省去自行建立 Webhook、Polling 與 Auth backend 的時間。
 - Client 可直接使用 Firebase SDK，但所有資料存取都必須由 Security Rules 保護。
-- 資料模型需要依畫面與 Query pattern 設計，並接受 NoSQL 的 Denormalization 與查詢限制。
+- 資料模型需要依畫面與 Query pattern 設計；這正是 [[SQL vs NoSQL]] 中以 Access pattern 為中心的 NoSQL 思維，並需接受 Denormalization 與查詢限制。
 - 若未來需要複雜報表、稽核或跨集合關聯，可能需要額外後端或遷移評估。
 
 Security Rules 的基本流程：
@@ -62,9 +62,10 @@ match /weddings/{weddingId}/guests/{guestId} {
 
 - [[SQL vs NoSQL]]
 - [[System Design Foundations]]
-- [[Expense Receipt AI Pipeline]]
+- [[Wedding Table Service]]
+- [[Side Projects]]
+- [[Webhook Architecture]]
 
 ## References
 
 - [[2026-06-07 - 6-7 weekly update]]
-

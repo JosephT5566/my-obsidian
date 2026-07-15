@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Symptoms
 
-Development node 顯示 `fsockopen(): Unable to connect to unix:///opt/sock/hzsock/sl.sock`，指出預期的 Unix socket 不存在。
+[[C2]] development node 顯示 `fsockopen(): Unable to connect to unix:///opt/sock/hzsock/sl.sock`，指出 [[Apache Thrift RPC|Thrift]] client 預期的 Unix socket 不存在。
 
 ## Environment
 
@@ -20,7 +20,7 @@ Development node 顯示 `fsockopen(): Unable to connect to unix:///opt/sock/hzso
 
 1. 確認 error path 與實際 filesystem socket 是否一致。
 2. 確認負責建立 socket 的 service/process 是否啟動。
-3. 檢查目前 attach 的 container、cluster 與 codepath 是否正確。
+3. 依 [[C2 Development on Kubernetes]] 的環境路徑，檢查目前 attach 的 container、cluster 與 codepath 是否正確。
 4. 對照 C2/Thrift configuration，確認此環境應使用 Unix socket 還是 network endpoint。
 
 ## Root Cause
@@ -35,6 +35,8 @@ Development node 顯示 `fsockopen(): Unable to connect to unix:///opt/sock/hzso
 
 - [[Apache Thrift RPC]]
 - [[C2 Development on Kubernetes]]
+- [[C2]]
+- [[Houzz]]
 
 ## References
 

@@ -1,7 +1,7 @@
 ---
 type: concept
 status: growing
-topics: [browser-api, visibility, web-performance]
+topics: [houzz, jukwaa, browser-api, visibility, web-performance]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Summary
 
-`IntersectionObserver` 非同步觀察 target element 與 viewport 或指定 root 的相交比例，適合 visibility tracking、lazy loading 與 infinite scrolling。
+`IntersectionObserver` 非同步觀察 target element 與 viewport 或指定 root 的相交比例，適合 [[Jukwaa]] 等 frontend 的 visibility tracking、lazy loading 與 infinite scrolling。若用於產品事件，還要配合 [[Frontend Analytics Instrumentation]] 的 naming 與曝光規則。
 
 ## How It Works
 
@@ -38,6 +38,7 @@ observer.observe(target);
 
 - [[Web Rendering Best Practices]]
 - [[Frontend Analytics Instrumentation]]
+- [[Jukwaa]]
 
 ## References
 

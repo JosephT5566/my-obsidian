@@ -1,7 +1,7 @@
 ---
 type: concept
 status: seed
-topics: [experimentation, rollout, analytics]
+topics: [houzz, marketplace, experimentation, rollout, analytics]
 created: "2026-07-14"
 ---
 
@@ -13,7 +13,7 @@ A/B test 透過穩定分桶把流量分配到 control 與 treatment；ramp up/do
 
 ## Example
 
-Houzz 舊有 bucket 設定範例：1% rollout 可使用 control `0–9`、treatment `500–509`；ramp down 到 0% 時清空兩側 bucket ranges。
+[[Houzz]] 舊有 bucket 設定範例：1% rollout 可使用 control `0–9`、treatment `500–509`；ramp down 到 0% 時清空兩側 bucket ranges。[[Houzz Marketplace]] 的 growth features 是需要同時規劃 experiment isolation、analytics 與 rollout strategy 的實際案例。
 
 ## Tradeoffs
 
@@ -25,6 +25,8 @@ Houzz 舊有 bucket 設定範例：1% rollout 可使用 control `0–9`、treatm
 
 - [[Frontend Analytics Instrumentation]]
 - [[Marketplace Growth Experiments]]
+- [[Houzz Marketplace]]
+- [[Houzz]]
 
 ## References
 

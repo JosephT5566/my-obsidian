@@ -1,7 +1,7 @@
 ---
 type: how-to
 status: growing
-topics: [redis, cache, debugging]
+topics: [houzz, redis, cache, debugging]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Goal
 
-從 staging 或 production debug pod 查詢 Redis key，確認 cache value；production 僅允許 read-only investigation。
+從 [[Houzz]] staging 或 production debug pod 查詢 Redis key，確認 [[C2]] 等 services 使用的 cache value；production 僅允許 read-only investigation。Pod 診斷建立在 [[Kubernetes Architecture and Debugging]] 的 container 與 cluster model 上。
 
 ## Steps
 
@@ -28,6 +28,8 @@ created: "2026-07-14"
 
 - [[System Design Foundations]]
 - [[Kubernetes Architecture and Debugging]]
+- [[C2]]
+- [[Houzz]]
 
 ## References
 

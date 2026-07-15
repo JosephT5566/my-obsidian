@@ -1,7 +1,7 @@
 ---
 type: how-to
 status: growing
-topics: [c2, kubernetes, debugging, codepath]
+topics: [houzz, c2, kubernetes, debugging, codepath]
 created: "2026-07-14"
 ---
 
@@ -9,7 +9,7 @@ created: "2026-07-14"
 
 ## Goal
 
-用 AWS SSO、EKS context、Codepath pod 與 VS Code remote attachment 調試 C2 或 C2Thrift code。
+在 [[Kubernetes Architecture and Debugging|Kubernetes]] 環境中，用 AWS SSO、EKS context、Codepath pod 與 VS Code remote attachment 調試 [[C2]] 或 C2Thrift code。
 
 ## Prerequisites
 
@@ -22,9 +22,9 @@ created: "2026-07-14"
 2. 用 `aws eks update-kubeconfig --profile <profile> --name <cluster> --alias <cluster>` 建立 context。
 3. 以 `kubectx` 切換 cluster，確認 namespace 與 deployment。
 4. 部署 branch Codepath，取得 codepath cookie 與 pod。
-5. Attach VS Code 到正確 container：一般 C2 page 用 `c2web`；service/GraphQL 相關通常用 `c2thrift`。
+5. Attach VS Code 到正確 container：一般 C2 page 用 `c2web`；[[Jukwaa]]／GraphQL 所呼叫的 service 通常在 `c2thrift`。
 6. 在 `/home/clipu/c2` 修改與觀察 log；C2 JS/CSS 另開啟 Debug JS/CSS。
-7. Thrift contract 的正式改動必須在 `c2thrift` repo 完成，再 bump C2/Jukwaa submodule pointer。
+7. [[Apache Thrift RPC|Thrift]] contract 的正式改動必須在 `c2thrift` repo 完成，再 bump C2/Jukwaa submodule pointer。
 
 ## Verification
 
@@ -43,6 +43,9 @@ created: "2026-07-14"
 - [[Apache Thrift RPC]]
 - [[Kubernetes Architecture and Debugging]]
 - [[C2-Jukwaa Web Module]]
+- [[C2]]
+- [[Jukwaa]]
+- [[Houzz]]
 
 ## References
 
