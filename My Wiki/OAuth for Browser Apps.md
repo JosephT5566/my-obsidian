@@ -36,4 +36,4 @@ Google Identity 的 `google.accounts.id` 用於 authentication，回傳 ID Token
 
 ## References
 
-- `Row notes/2025-10-29 - Oauth.md`
+- [[2025-10-29 - Oauth]]

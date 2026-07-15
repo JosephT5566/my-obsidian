@@ -7,3 +7,4 @@
 ## [2026-07-15] 重整 Side Projects | 建立 Side Projects、Expense App、Wedding Table Service、Google Cloud Functions、Google Cloud Storage、Supabase 與 Supabase JWKS 頁面；補強 Expense Receipt AI Pipeline 與 Firebase Realtime App Architecture 的正文雙向連結，並更新 Index.md。
 ## [2026-07-15] 更新知識組織規則 | 在 AGENTS.md 加入 Side Project、Subsystem／Decision 與 Reusable technology 的分層方式，並要求正文語意連結、雙向案例連結及 Index 巢狀導覽。
 ## [2026-07-15] 重整 Houzz Engineering | 建立 Houzz、C2、Jukwaa 與 Houzz Marketplace 導覽頁；將 C2／Jukwaa／Marketplace workflows 納入分層 Index，並補強相關文章與 Kubernetes、Thrift、Redis、Airflow、Frontend technologies 的正文交互連結。
+## [2026-07-15] 維護來源連結與 Obsidian 設定 | 將 OAuth for Browser Apps 的來源改為 wikilink；新增 .gitignore，停止追蹤 graph 與 workspace 等本機 UI state。
