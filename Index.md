@@ -38,6 +38,10 @@
 
 - [[AI Agent Architecture]] — 整理 System prompt、Function calling、Agent loop、MCP 與 Skill 的角色。
 - [[Interview Preparation with AI]] — 用 STAR Stories bank、JD 調整與 Transcript 回饋建立面試練習循環。
+- [[Backend Engineering Interview Practice]] — 以資料建模、API contract 與 full-stack reliability 題目練習 Backend system design 回答。
+  - [[PostgreSQL Schema Tradeoff Interview Practice]] — 練習 normalization、historical snapshot、JSONB 與 database invariants 的取捨。
+  - [[Async API Contract Interview Practice]] — 練習 async resource、partial success、HTTP semantics 與 idempotency。
+  - [[Full-stack Error Handling Interview Practice]] — 練習 client／worker retry、durable job、outbox、recovery 與 observability。
 - [[Remote Codex with Self-hosted Runner]] — 透過 GitHub Actions self-hosted runner 遠端觸發本機 CLI 工作流程。
 
 ## Frontend Engineering
@@ -71,7 +75,12 @@
 ## Data and System Design
 
 - [[SQL vs NoSQL]] — 從資料關係、Access pattern、Transaction、Scale 與維護成本比較資料庫模型。
+- [[PostgreSQL Relational Data Modeling]] — 比較 normalized relation、historical snapshot 與 JSONB 的完整性、查詢和併發取捨。
 - [[Supabase]] — Expense App 使用的 PostgreSQL-based Backend as a Service，以及其 Auth、JWT 與資料存取邊界。
 - [[System Design Foundations]] — 從單機擴展到 Load balancing、Cache、Queue、Replication、Statelessness 與 Sharding。
 - [[Distributed Transactions - 2PC and Saga]] — 比較 2PC 與 Saga 的一致性、補償、協調方式與失敗處理。
+- [[API Contract Design]] — 從 resource、state transition、partial success 與 error contract 定義 Client 可依賴的 API 語意。
+- [[Idempotent Request Handling]] — 用 scoped key、payload hash、unique constraint 與 atomic insert 吸收重複請求和投遞。
+- [[Reliable Background Job Processing]] — 用 durable job state、atomic claim、lease、sweeper 與 bounded retry 建立可恢復的非同步工作。
+- [[Transactional Outbox]] — 以 local transaction 和 dispatcher 解決 database commit 與外部 queue publish 的 dual-write 缺口。
 - [[Back-of-the-envelope Estimation]] — 將 QPS、Peak、Storage、Latency 與 SLA 估算連回架構決策。

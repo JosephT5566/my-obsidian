@@ -30,7 +30,7 @@ created: "2026-07-14"
 
 - **Choreography**：服務透過事件彼此觸發，耦合較鬆，但流程分散、較難追蹤。
 - **Orchestration**：由中央 Orchestrator 明確指揮步驟，流程較容易觀察，但 Orchestrator 會成為重要元件。
-- **Transactional Outbox**：把業務資料與待發布事件寫入同一個本地 Transaction，再由背景程序可靠地發布。
+- **[[Transactional Outbox]]**：把業務資料與待發布事件寫入同一個 local transaction，再由背景程序可靠地發布；它解決 database-to-queue dual write，但仍需要 idempotent consumer 處理重複投遞。
 
 ## Example
 
@@ -55,9 +55,11 @@ Payment failed
 
 - [[System Design Foundations]]
 - [[SQL vs NoSQL]]
+- [[Transactional Outbox]]
+- [[Idempotent Request Handling]]
 
 ## References
 
 - [[2026-05-24 - 5-24 weekly update]]
+- [[2026-07-19 weekly updates]]
 - [Distributed Transactions Explained: 2 Phase Commit vs Saga Pattern](https://www.youtube.com/watch?v=DOFflggE_0Q)
-

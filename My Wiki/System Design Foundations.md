@@ -37,6 +37,7 @@ created: "2026-07-14"
 - **Message queue**：降低同步耦合，但引入 Eventual consistency 與失敗處理。
 - **SQL / NoSQL**：依資料保證與 Access pattern 選擇，不以流行度決定。
 - **API design**：API 是對 Client 的契約，需考慮 Resource model、Versioning 與 Backward compatibility。
+- **Reliable async processing**：[[API Contract Design]] 定義 resource 與 state；[[Reliable Background Job Processing]] 用 durable state、lease 與 retry 恢復工作；[[Transactional Outbox]] 只在 database 必須可靠發布到外部 queue 時解決 dual-write。
 
 ## Examples
 
@@ -62,11 +63,15 @@ created: "2026-07-14"
 - [[Back-of-the-envelope Estimation]]
 - [[Distributed Transactions - 2PC and Saga]]
 - [[SQL vs NoSQL]]
+- [[API Contract Design]]
+- [[Idempotent Request Handling]]
+- [[Reliable Background Job Processing]]
+- [[Transactional Outbox]]
 
 ## References
 
 - [[2026-06-07 - 6-7 weekly update]]
 - [[2026-07-12 - 7-12 weekly update]]
+- [[2026-07-19 weekly updates]]
 - [ByteByteGo System Design](https://bytebytego.com/courses/system-design-interview)
 - [900+ hours of Learning System Design in 9 Minutes](https://www.youtube.com/watch?v=3Pusamd6BO4)
-
