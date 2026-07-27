@@ -1,7 +1,7 @@
 ---
 type: concept
 status: growing
-topics: [side-projects, project-navigation, architecture]
+topics: [side-project, project-navigation, architecture]
 created: "2026-07-15"
 ---
 

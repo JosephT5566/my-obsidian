@@ -2,6 +2,7 @@
 type: troubleshooting
 status: resolved
 technology:
+topics: []
 created: "{{date:YYYY-MM-DD}}"
 ---
 

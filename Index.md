@@ -76,11 +76,14 @@
 
 - [[SQL vs NoSQL]] — 從資料關係、Access pattern、Transaction、Scale 與維護成本比較資料庫模型。
 - [[PostgreSQL Relational Data Modeling]] — 比較 normalized relation、historical snapshot 與 JSONB 的完整性、查詢和併發取捨。
+- [[Database Unique Constraint]] — 用 single／composite uniqueness、database concurrency arbitration 與 conflict handling 保護核心資料規則。
 - [[Supabase]] — Expense App 使用的 PostgreSQL-based Backend as a Service，以及其 Auth、JWT 與資料存取邊界。
 - [[System Design Foundations]] — 從單機擴展到 Load balancing、Cache、Queue、Replication、Statelessness 與 Sharding。
 - [[Distributed Transactions - 2PC and Saga]] — 比較 2PC 與 Saga 的一致性、補償、協調方式與失敗處理。
 - [[API Contract Design]] — 從 resource、state transition、partial success 與 error contract 定義 Client 可依賴的 API 語意。
-- [[Idempotent Request Handling]] — 用 scoped key、payload hash、unique constraint 與 atomic insert 吸收重複請求和投遞。
+- [[Idempotent Request Handling]] — 用 scoped key、payload hash、[[Database Unique Constraint|unique constraint]] 與 atomic insert 吸收重複請求和投遞。
+  - [[Idempotency Key]] — 定義 Client key generation、composite scope、[[Database Unique Constraint|unique constraint]] 仲裁、payload binding、response replay 與 expiration contract。
 - [[Reliable Background Job Processing]] — 用 durable job state、atomic claim、lease、sweeper 與 bounded retry 建立可恢復的非同步工作。
+  - [[Lease-Based Job Recovery]] — 用 time-bounded ownership、heartbeat、fencing token 與 sweeper 回收 crash 或 stuck worker 遺留的工作。
 - [[Transactional Outbox]] — 以 local transaction 和 dispatcher 解決 database commit 與外部 queue publish 的 dual-write 缺口。
 - [[Back-of-the-envelope Estimation]] — 將 QPS、Peak、Storage、Latency 與 SLA 估算連回架構決策。

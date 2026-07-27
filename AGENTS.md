@@ -47,6 +47,9 @@
 	- 每篇筆記只使用一個主要範本。
 	- 建立筆記時，必須取代範本中的預留內容，並移除不適用的空白段落。
 	- `type` 使用範本預設值；`status`、`topics`、`technology`、`language` 和 `source` 應依實際內容填寫。
+	- `My Wiki` 每篇頁面都必須有 `topics` list；使用 lowercase kebab-case，並優先重用現有值，避免建立同義詞或只有單複數差異的變體。
+	- `topics` 用於跨頁篩選，不取代正文的語意 wikilink；Project、Subsystem、Tool 或 Concept 之間的實際關係仍須以[[雙向連結]]表達。
+	- 新增 topic 前先搜尋既有 vocabulary；單次使用的具體 Tool、Protocol 或技術概念可以保留，但不要加入與 `type`、`status` 完全重複的分類。
 	- `Related` 內的空白 `[[]]` 必須替換為至少一個實際相關頁面。
 - 每個新頁面都要使用[[雙向連結]]至少連到一個相關頁面，避免變成孤立筆記。建立時請評估相關用詞。
 - 關鍵專案、Subsystem、Tool、Platform 或 Concept 第一次出現在正文時，應直接使用[[雙向連結]]或帶 Alias 的連結（例如 `[[Google Cloud Functions|GCF]]`），不能只在 `Related` 段落列出連結。

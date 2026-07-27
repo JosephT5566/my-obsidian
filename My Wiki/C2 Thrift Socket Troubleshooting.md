@@ -2,6 +2,7 @@
 type: troubleshooting
 status: growing
 technology: C2 Thrift
+topics: [houzz, c2, thrift, debugging, unix-socket]
 created: "2026-07-14"
 ---
 

@@ -19,7 +19,7 @@ Schema 不只決定資料怎麼存，也決定非法資料在哪裡被阻止、�
 
 ### Relation 與 Source of Truth
 
-Foreign key 保存 entity relationship，例如 expense 目前屬於哪個 category。欄位型別、`CHECK` 與 `UNIQUE` 可由 PostgreSQL 對所有寫入路徑一致執行，不會被 SQL console、migration 或 background job 繞過。
+Foreign key 保存 entity relationship，例如 expense 目前屬於哪個 category。欄位型別、`CHECK` 與 [[Database Unique Constraint|UNIQUE constraint]] 可由 PostgreSQL 對所有寫入路徑一致執行，不會被 SQL console、migration 或 background job 繞過。
 
 ### Historical Snapshot
 
@@ -49,6 +49,7 @@ FROM jsonb_array_elements($1::jsonb) AS share;
 ## Related
 
 - [[PostgreSQL Schema Tradeoff Interview Practice]]
+- [[Database Unique Constraint]]
 - [[SQL vs NoSQL]]
 - [[Supabase]]
 - [[Distributed Transactions - 2PC and Saga]]

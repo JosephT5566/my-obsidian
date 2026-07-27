@@ -49,6 +49,7 @@ SQL database 通常先定義資料關係與一致性限制；NoSQL database 更�
 - [[Distributed Transactions - 2PC and Saga]]
 - [[System Design Foundations]]
 - [[PostgreSQL Relational Data Modeling]]
+- [[Database Unique Constraint]]
 - [[PostgreSQL Schema Tradeoff Interview Practice]]
 
 ## References

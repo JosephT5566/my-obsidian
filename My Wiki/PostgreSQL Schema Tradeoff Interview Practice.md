@@ -18,14 +18,14 @@ created: "2026-07-19"
 - Foreign key 保存目前 entity relationship，snapshot 保存事件發生時的歷史語意。
 - 一筆 expense 有多個 category 時，snapshot 應放在 allocation join row。
 - 穩定且重要的 participant、amount 與 payment status 優先正規化。
-- JSONB 的彈性會犧牲 element-level foreign key、型別、unique constraint、精細更新與直接查詢。
+- JSONB 的彈性會犧牲 element-level foreign key、型別、[[Database Unique Constraint|unique constraint]]、精細更新與直接查詢。
 - Middleware 提供輸入驗證與友善錯誤；database 保護所有寫入路徑都必須成立的 invariant。
 
 完整技術整理見 [[PostgreSQL Relational Data Modeling]]。
 
 ## Examples
 
-面試回答可先說：「核心關聯正規化，歷史名稱使用 explicit snapshot。」接著列出 primary key、foreign key、unique／check constraint，再比較 JSONB 的適用條件與 concurrency 成本。
+面試回答可先說：「核心關聯正規化，歷史名稱使用 explicit snapshot。」接著列出 primary key、foreign key、[[Database Unique Constraint|unique]]／check constraint，再比較 JSONB 的適用條件與 concurrency 成本。
 
 ## Questions
 
@@ -41,6 +41,7 @@ Schema 題不只描述資料如何保存，也要說明非法資料如何被阻�
 
 - [[Backend Engineering Interview Practice]]
 - [[PostgreSQL Relational Data Modeling]]
+- [[Database Unique Constraint]]
 - [[SQL vs NoSQL]]
 - [[Supabase]]
 

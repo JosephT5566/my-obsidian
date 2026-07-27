@@ -1,7 +1,7 @@
 ---
 type: tool-or-library
 status: active
-topics: [gcp, serverless, backend, authentication]
+topics: [gcp, gcf, serverless, backend, authentication]
 created: "2026-07-15"
 ---
 

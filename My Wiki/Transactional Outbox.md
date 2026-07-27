@@ -1,7 +1,7 @@
 ---
 type: concept
 status: growing
-topics: [distributed-systems, transaction, messaging, reliability, outbox]
+topics: [distributed-systems, transactions, messaging, reliability, outbox]
 created: "2026-07-19"
 ---
 

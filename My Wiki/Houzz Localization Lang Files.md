@@ -1,7 +1,7 @@
 ---
 type: how-to
 status: growing
-topics: [localization, webpack, frontend]
+topics: [houzz, jukwaa, localization, webpack, frontend]
 created: "2026-07-14"
 ---
 

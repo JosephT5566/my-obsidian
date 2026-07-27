@@ -1,7 +1,7 @@
 ---
 type: tool-or-library
 status: active
-topics: [gcp, object-storage, signed-url, image-upload]
+topics: [gcp, gcs, object-storage, signed-url, image-upload]
 created: "2026-07-15"
 ---
 
