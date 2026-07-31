@@ -189,6 +189,7 @@ Location: /v1/parsing-jobs/job_456
 - [[Idempotent Request Handling]]
 - [[Database Unique Constraint]]
 - [[API Contract Design]]
+- [[Expense Draft Review Workflow]]
 - [[Reliable Background Job Processing]]
 - [[Transactional Outbox]]
 
@@ -196,3 +197,4 @@ Location: /v1/parsing-jobs/job_456
 
 - [[Idempotent Request Handling]]
 - [[Async API Contract Interview Practice]]
+- [[2026-07-26 weekly updates]]

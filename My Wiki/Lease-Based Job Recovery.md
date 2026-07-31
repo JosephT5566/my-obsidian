@@ -110,6 +110,11 @@ Affected rows 為 `0` 表示 worker 已失去 ownership，不能把本次結果�
 ## Related
 
 - [[Reliable Background Job Processing]]
+- [[Expense Receipt AI Pipeline]]
 - [[Idempotent Request Handling]]
 - [[Transactional Outbox]]
 - [[System Design Foundations]]
+
+## References
+
+- [[2026-07-26 weekly updates]]

@@ -6,6 +6,7 @@
   - [[Expense App]] — 支出管理 App 的功能、Authentication、UI 演進與 Receipt AI 子系統入口。
     - [[Expense App Authentication]] — Supabase Auth 負責登入與 session，GCF AI endpoint 透過 Supabase JWKS 驗證 Access Token 的責任分界。
     - [[Expense Receipt AI Pipeline]] — Expense App 的收據圖片 Upload、AI Analysis 與 Summary pipeline。
+      - [[Expense Draft Review Workflow]] — 將 AI extraction 保存為可編輯 draft，以 version、human review 與 idempotent confirm 建立正式 expense。
   - [[Travel Split App]] — 旅行費用分帳 App，以及 Cloudflare、Google OAuth、GAS／GCF 與 Google Sheets 的 authentication architecture。
     - [[Travel Split Backend Migration]] — 為解決 full-proxy latency，從 Cloudflare proxy + Workers KV + GAS 遷移到 token issuer + cookie + GCF verification。
   - [[Wedding Table Service]] — 婚禮現場多裝置報到 App 的目標、限制與技術選擇。
@@ -37,6 +38,7 @@
 ## AI and Career
 
 - [[AI Agent Architecture]] — 整理 System prompt、Function calling、Agent loop、MCP 與 Skill 的角色。
+- [[AI Structured Output Validation]] — 將 model output 視為不可信 candidate，以 strict schema、Server validation、least privilege 與 human review 保護正式資料。
 - [[Interview Preparation with AI]] — 用 STAR Stories bank、JD 調整與 Transcript 回饋建立面試練習循環。
 - [[Backend Engineering Interview Practice]] — 以資料建模、API contract 與 full-stack reliability 題目練習 Backend system design 回答。
   - [[PostgreSQL Schema Tradeoff Interview Practice]] — 練習 normalization、historical snapshot、JSONB 與 database invariants 的取捨。
@@ -67,6 +69,7 @@
 
 - [[OAuth for Browser Apps]] — 區分 authentication、application session 與 delegated API authorization，並整理 Browser token models 與安全邊界。
 - [[Supabase JWKS]] — 用公開 JWKS key 驗證 Supabase asymmetric JWT，避免讓驗證端持有 signing secret。
+- [[PostgreSQL Row-Level Security]] — 用 `USING`／`WITH CHECK`、tenant-scoped membership 與多層防線保護 PostgreSQL rows。
 
 ## Product and Experimentation
 

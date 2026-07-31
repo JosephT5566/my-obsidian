@@ -28,6 +28,10 @@ REST、JSON 與 HTTP status 只是形式；Client 真正需要的是穩定、可
 
 工作已正常執行、但部分欄位無法辨識時，job 可以是 `completed`；欄位以 `null`、field status 與 confidence 表達品質。JSON 不支援 `undefined`。
 
+### Editable Draft and Confirm
+
+AI candidate 需要人工修正時，可把 mutable draft 與正式 state transition 分開：`PATCH` 保存修正並以 version 防止 lost update，獨立 `confirm` endpoint 再驗證 owner、state、version 與完整 payload。[[Expense Draft Review Workflow]] 使用 `409` 表達 stale version／state conflict，並用 [[Idempotency Key]] 讓 confirm timeout 後安全重試。
+
 ### Error Contract
 
 HTTP status 表達通用協定語意，application code 表達產品行為。Error response 可包含穩定 `code`、安全 `message`、`request_id`、`retryable` 與 retry hint。Client 依 `code` 行動，不解析 message，也不直接依賴 PostgreSQL 或 provider error。
@@ -67,8 +71,12 @@ HTTP status 表達通用協定語意，application code 表達產品行為。Err
 - [[Async API Contract Interview Practice]]
 - [[Idempotent Request Handling]]
 - [[Reliable Background Job Processing]]
+- [[Expense Draft Review Workflow]]
+- [[AI Structured Output Validation]]
+- [[PostgreSQL Row-Level Security]]
 - [[System Design Foundations]]
 
 ## References
 
 - [[2026-07-19 weekly updates]]
+- [[2026-07-26 weekly updates]]

@@ -63,9 +63,12 @@ API transaction → business row + job row → commit → worker claim
 - [[Async API Contract Interview Practice]]
 - [[Idempotent Request Handling]]
 - [[Lease-Based Job Recovery]]
+- [[Expense Receipt AI Pipeline]]
+- [[Expense Draft Review Workflow]]
 - [[Transactional Outbox]]
 - [[System Design Foundations]]
 
 ## References
 
 - [[2026-07-19 weekly updates]]
+- [[2026-07-26 weekly updates]]

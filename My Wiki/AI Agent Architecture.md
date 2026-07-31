@@ -36,7 +36,7 @@ User request
 
 ## Tradeoffs
 
-- Function calling 改善格式可靠性，但仍需要參數驗證、權限控制與錯誤處理。
+- Function calling 與 [[AI Structured Output Validation|structured output]] 改善格式可靠性，但仍需要 Server-side schema／business validation、權限控制與錯誤處理。
 - MCP 降低多個 Client 重複整合工具的成本，也增加 Server lifecycle 與信任邊界。
 - Skill 的 Progressive disclosure 節省 Context window，但 Metadata 品質會影響是否正確啟用。
 - Agent 自主性越高，越需要清楚的 Scope、Approval 與 Verification。
@@ -44,11 +44,12 @@ User request
 ## Related
 
 - [[Expense Receipt AI Pipeline]]
+- [[AI Structured Output Validation]]
 - [[Interview Preparation with AI]]
 - [[Remote Codex with Self-hosted Runner]]
 
 ## References
 
 - [[2026-05-24 - 5-24 weekly update]]
+- [[2026-07-26 weekly updates]]
 - [Model Context Protocol](https://modelcontextprotocol.io/)
-

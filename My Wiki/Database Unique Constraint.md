@@ -133,6 +133,7 @@ CONSTRAINT uq_idempotency_scope
 - [[Idempotency Key]]
 - [[Idempotent Request Handling]]
 - [[PostgreSQL Relational Data Modeling]]
+- [[PostgreSQL Row-Level Security]]
 - [[PostgreSQL Schema Tradeoff Interview Practice]]
 - [[SQL vs NoSQL]]
 
@@ -140,3 +141,4 @@ CONSTRAINT uq_idempotency_scope
 
 - [PostgreSQL: Unique Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-UNIQUE-CONSTRAINTS)
 - [PostgreSQL: INSERT and ON CONFLICT](https://www.postgresql.org/docs/current/sql-insert.html)
+- [[2026-07-26 weekly updates]]

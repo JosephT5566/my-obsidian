@@ -9,7 +9,7 @@ topics: [side-project, expense, authentication, oauth, supabase, jwt]
 
 ## Context
 
-[[Expense App]] 是 Browser-based application，登入、session、token refresh 與 Supabase data authorization 交由 [[Supabase]] Auth 處理。[[Google Cloud Functions]] 不負責登入或簽發 application session，但 [[Expense Receipt AI Pipeline|AI service endpoints]] 是受保護的 Resource Server：Client 呼叫時帶上 Supabase Access Token，GCF 再透過 [[Supabase JWKS]] 驗證身份。
+[[Expense App]] 是 Browser-based application，登入、session、token refresh 交由 [[Supabase]] Auth 處理，Supabase data authorization 則由 [[PostgreSQL Row-Level Security|PostgreSQL RLS]] 執行。[[Google Cloud Functions]] 不負責登入或簽發 application session，但 [[Expense Receipt AI Pipeline|AI service endpoints]] 是受保護的 Resource Server：Client 呼叫時帶上 Supabase Access Token，GCF 再透過 [[Supabase JWKS]] 驗證身份。
 
 原始 OAuth 學習筆記同時研究 Google Identity、Supabase session、OAuth proxy 與 backend token verification；這些是方案比較，不代表 Expense App 全部採用。
 
@@ -32,7 +32,7 @@ topics: [side-project, expense, authentication, oauth, supabase, jwt]
 
 - [[Supabase]] 完成 Google social login 後，簽發自己的 Access Token（JWT）與 rotating Refresh Token。
 - Supabase SDK 管理 Browser session 與 token refresh，並自動把 JWT 用於 Supabase requests。
-- Supabase API 驗證 session，PostgreSQL Row Level Security（RLS）負責 data authorization。
+- Supabase API 驗證 session，[[PostgreSQL Row-Level Security]] 負責 data authorization。
 - 這是 Expense App 實際採用的方案。
 
 ## Decision
@@ -54,7 +54,7 @@ Google social login
 
 - Login、session refresh 與 token issuance 集中在 Supabase；GCF 不維護另一套 session，但必須驗證每一筆受保護的 AI request。
 - Browser session lifecycle 交由 Supabase SDK 管理；不能假設 Refresh Token 固定 30 天過期。Session lifetime 取決於 sign-out、password/security events，以及專案設定的 time-box、inactivity 或 single-session policy。
-- Client 能直接存取 Supabase data，因此 Row Level Security 是必要的 authorization layer。
+- Client 能直接存取 Supabase data，因此 [[PostgreSQL Row-Level Security|RLS]] 是必要的 authorization layer；policy 必須同時考慮 ownership、tenant membership、`UPDATE` old／new row 與 organization-scoped admin。
 - `health` action 不驗證 JWT；`get_upload_url` 與 `analyze_receipt` 會先驗證 JWT，失敗時回傳 `401`。
 - 目前程式註解把 JWT 初始化寫成 `RS256`，實際 `jwt.decode` 卻只接受 `ES256`；文件以執行邏輯為準，但程式註解應同步修正，並確認 Supabase 專案實際使用的 signing algorithm。
 - [[TanStack Query Server State|Server-state cache]] 不負責 authentication；sign-out 或 session termination 時需要清除 user-scoped queries。
@@ -62,7 +62,7 @@ Google social login
 ## Follow-up Actions
 
 - [ ] 測試 page reload、multi-tab、token refresh、sign-out 與 expired session 的 UI 狀態。
-- [ ] 檢查 Supabase RLS policies，避免只依賴前端隱藏功能。
+- [ ] 依 [[PostgreSQL Row-Level Security]] 檢查 Supabase policies，避免只依賴前端隱藏功能，並測試跨 tenant update、敏感欄位變更與 privileged role。
 - [ ] 對刪除帳號等敏感操作評估 Manual re-authentication。
 - [ ] 驗證 `issuer`，並確認 key rotation、JWKS cache refresh 與找不到 `kid` 時的行為。
 - [ ] `analyze_receipt` 除了驗證 JWT，也要確認每個 `file_path` 都屬於 `uploads/{sub}/`，避免已登入使用者讀取其他使用者的 Object。
@@ -73,6 +73,7 @@ Google social login
 - [[Expense App]]
 - [[OAuth for Browser Apps]]
 - [[Supabase]]
+- [[PostgreSQL Row-Level Security]]
 - [[Supabase JWKS]]
 - [[Expense Receipt AI Pipeline]]
 
@@ -80,6 +81,7 @@ Google social login
 
 - [[2025-10-29 - Oauth]]
 - [[2026-05-10 - 5-10 weekly updates]]
+- [[2026-07-26 weekly updates]]
 - User clarification (2026-07-16)
 - [Private implementation: google-ai-gcf/main.py](https://github.com/JosephT5566/google-ai-gcf/blob/main/main.py)
 - [Google Identity Services: Choose an authorization model](https://developers.google.com/identity/oauth2/web/guides/choose-authorization-model)

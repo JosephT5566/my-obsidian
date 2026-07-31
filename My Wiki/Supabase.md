@@ -9,13 +9,13 @@ created: "2026-07-15"
 
 ## Summary
 
-Supabase 是以 PostgreSQL 為核心的 Backend as a Service，整合 database、authentication、storage 與 API。[[Expense App]] 使用 Supabase Auth 處理登入、session、token refresh 與 token issuance，並以 Supabase API／Row Level Security 保護 App data；呼叫 AI GCF 時，也會把同一個 Supabase Access Token 交給 endpoint 驗證。
+Supabase 是以 PostgreSQL 為核心的 Backend as a Service，整合 database、authentication、storage 與 API。[[Expense App]] 使用 Supabase Auth 處理登入、session、token refresh 與 token issuance，並以 Supabase API／[[PostgreSQL Row-Level Security|Row Level Security]] 保護 App data；呼叫 AI GCF 時，也會把同一個 Supabase Access Token 交給 endpoint 驗證。
 
 ## Use Cases
 
 - 以 PostgreSQL 儲存並查詢 application data。
 - 使用 Supabase Auth 封裝第三方登入、session 與 token refresh。
-- 讓 Supabase API 驗證 session JWT，並透過 PostgreSQL Row Level Security 執行 authorization。
+- 讓 Supabase API 驗證 session JWT，並透過 [[PostgreSQL Row-Level Security]] 執行 row authorization。
 
 ## Authentication
 
@@ -33,7 +33,7 @@ Access Token 通常是短效 JWT；Refresh Token 一般只能使用一次，成�
 
 ## Limitations
 
-- Client 能直接接觸 data API 時，Row Level Security policy 必須正確且持續測試。
+- Client 能直接接觸 data API 時，[[PostgreSQL Row-Level Security|RLS policy]] 必須正確且持續測試；ownership、tenant membership、old／new row 與 privileged role 都要分別驗證。
 - Supabase session token 不等於 Google API Access Token，不能直接拿來呼叫 Google Drive 等 resource API。
 - JWT signing mode 或 key rotation 改變時，所有驗證端都必須正確處理。
 
@@ -41,6 +41,7 @@ Access Token 通常是短效 JWT；Refresh Token 一般只能使用一次，成�
 
 - [[Expense App]]
 - [[Expense App Authentication]]
+- [[PostgreSQL Row-Level Security]]
 - [[Supabase JWKS]]
 - [[OAuth for Browser Apps]]
 - [[SQL vs NoSQL]]
@@ -49,5 +50,6 @@ Access Token 通常是短效 JWT；Refresh Token 一般只能使用一次，成�
 
 - [[2026-05-10 - 5-10 weekly updates]]
 - [[2025-10-29 - Oauth]]
+- [[2026-07-26 weekly updates]]
 - [Supabase Auth: User sessions](https://supabase.com/docs/guides/auth/sessions)
 - [Private Expense AI implementation: google-ai-gcf/main.py](https://github.com/JosephT5566/google-ai-gcf/blob/main/main.py)

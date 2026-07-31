@@ -33,14 +33,17 @@ Expense Receipt flow 會先讓 [[Google Cloud Functions]] 建立約 10 分鐘有
 
 - Signed URL 本身在到期前是 bearer credential，外洩後可能被他人使用。
 - CORS、IAM、Content type 或簽章設定錯誤都可能導致 Client 上傳失敗。
+- [[PostgreSQL Row-Level Security|PostgreSQL RLS]] 只保護 database rows，不會自動授權 GCS object；Signed URL issuer 與 analysis endpoint 必須另外驗證 object path 屬於 authenticated user。
 - Object lifecycle、存取紀錄與敏感資料政策仍需另外設定。
 
 ## Related
 
 - [[Expense Receipt AI Pipeline]]
 - [[Google Cloud Functions]]
+- [[PostgreSQL Row-Level Security]]
 - [[System Design Foundations]]
 
 ## References
 
 - [[2026-05-10 - 5-10 weekly updates]]
+- [[2026-07-26 weekly updates]]
