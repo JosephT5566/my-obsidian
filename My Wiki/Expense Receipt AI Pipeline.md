@@ -38,12 +38,15 @@ topics: [side-project, expense, ai, gcf, gcs, frontend, jwt]
 
 [[Supabase]] Auth 與 Row Level Security 處理 Expense App 的登入、session 與 database authorization；GCF 只處理 AI-related operations，但它也是這些 endpoints 的 JWT verification boundary。GCF Service Account 只授予建立 Signed URL 與讀取必要 Object 的最低 Cloud permissions；Cloud IAM 與 end-user authentication 是兩個不同責任。
 
+截至 2026-08-02，google-ai-gcf PR #18–#22 已補上 canonical receipt schema、Gemini structured response、versioned normalized result contract、GCS ownership／image-input hardening，以及 prompt-injection control-plane protection。這些 correctness 與 security controls 是 [[Backend Service Production Readiness|production readiness]] 的 release-gate 基礎；rate／concurrency limits、metrics／alerts、retention policy、rollback 與 runbook 仍是後續 operational work。
+
 ## Follow-up Actions
 
 - [ ] 限制 Signed URL 的 Object path、Content type、Size 與有效時間。
-- [ ] 在 Analysis 階段驗證 `file_path` 必須位於目前 JWT `sub` 對應的 prefix。
+- [x] 在 Analysis 階段驗證 `file_path` 必須位於目前 JWT `sub` 對應的 prefix，並檢查 MIME、size、generation 與 magic bytes。
 - [ ] 為暫存圖片設定 Lifecycle deletion。
-- [ ] 依 [[AI Structured Output Validation]] 驗證 AI response schema、business rules、owner 與 source file，不直接信任 Model output。
+- [x] 以 canonical schema 驗證 AI response，分離 raw／normalized result，並讓 invalid output 在 normalization 或 persistence 前停止。
+- [ ] 依 [[AI Structured Output Validation]] 補齊 draft 的 business rules、owner 與 source-file validation，不直接信任 Model output。
 - [ ] 評估實作 [[Expense Draft Review Workflow]]，保存 raw extraction／draft value，並以 version 與 idempotency 保護 confirm。
 - [ ] 記錄 Analysis request ID，避免重試造成重複寫入。
 - [ ] 檢查 GCF、GCS 與 AI API 的成本與錯誤率。
@@ -62,10 +65,12 @@ topics: [side-project, expense, ai, gcf, gcs, frontend, jwt]
 - [[Travel Split App]]
 - [[System Design Foundations]]
 - [[Reliable Background Job Processing]]
+- [[Backend Service Production Readiness]]
 
 ## References
 
 - [[2026-05-10 - 5-10 weekly updates]]
 - [[2026-05-17 - 5-17 weekly update]]
 - [[2026-07-26 weekly updates]]
+- [[2026-08-02 weekly updates]]
 - [Private implementation: google-ai-gcf/main.py](https://github.com/JosephT5566/google-ai-gcf/blob/main/main.py)

@@ -15,6 +15,8 @@ Unique constraint 是 database schema 的完整性規則，用來保證一個欄
 
 Application validation 可以提供友善錯誤，但任何 API instance、background job、migration 或 SQL console 都可能寫入資料。若「同一個 expense 不能重複加入同一位 participant」或「同一個 scoped [[Idempotency Key|idempotency key]] 只能有一個 owner」是所有寫入路徑都必須遵守的規則，就應由 database constraint 作為最後一道 correctness boundary。
 
+在更廣泛的 [[PostgreSQL Concurrency Control]] 中，UNIQUE 負責的是 key-level invariant；庫存上限、狀態轉換或跨多筆資料的規則，還需要 conditional update、row lock 或 transaction isolation。
+
 這也是 [[PostgreSQL Relational Data Modeling]] 優先把核心資料正規化的理由之一：一般 table column 可以直接使用 unique、foreign key 與 check constraint，而 JSONB element 通常無法直接取得相同的 database guarantee。
 
 ## How It Works
@@ -135,6 +137,7 @@ CONSTRAINT uq_idempotency_scope
 - [[PostgreSQL Relational Data Modeling]]
 - [[PostgreSQL Row-Level Security]]
 - [[PostgreSQL Schema Tradeoff Interview Practice]]
+- [[PostgreSQL Concurrency Control]]
 - [[SQL vs NoSQL]]
 
 ## References
@@ -142,3 +145,4 @@ CONSTRAINT uq_idempotency_scope
 - [PostgreSQL: Unique Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-UNIQUE-CONSTRAINTS)
 - [PostgreSQL: INSERT and ON CONFLICT](https://www.postgresql.org/docs/current/sql-insert.html)
 - [[2026-07-26 weekly updates]]
+- [[2026-08-02 weekly updates]]

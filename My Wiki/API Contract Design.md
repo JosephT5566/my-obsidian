@@ -75,8 +75,10 @@ HTTP status 表達通用協定語意，application code 表達產品行為。Err
 - [[AI Structured Output Validation]]
 - [[PostgreSQL Row-Level Security]]
 - [[System Design Foundations]]
+- [[Backend Service Production Readiness]]
 
 ## References
 
 - [[2026-07-19 weekly updates]]
 - [[2026-07-26 weekly updates]]
+- [[2026-08-02 weekly updates]]

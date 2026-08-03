@@ -51,7 +51,9 @@ Dispatcher 可能已成功 publish，卻在更新 outbox row 前 crash。重啟�
 - [[Idempotent Request Handling]]
 - [[Distributed Transactions - 2PC and Saga]]
 - [[System Design Foundations]]
+- [[PostgreSQL Concurrency Control]]
 
 ## References
 
 - [[2026-07-19 weekly updates]]
+- [[2026-08-02 weekly updates]]

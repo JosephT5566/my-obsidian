@@ -38,12 +38,14 @@
 ## AI and Career
 
 - [[AI Agent Architecture]] — 整理 System prompt、Function calling、Agent loop、MCP 與 Skill 的角色。
+- [[AI Development Memory]] — 以 Repo、Shared Project 與 Session Memory 分層保存 AI-assisted development 的長期知識與短期進度。
 - [[AI Structured Output Validation]] — 將 model output 視為不可信 candidate，以 strict schema、Server validation、least privilege 與 human review 保護正式資料。
 - [[Interview Preparation with AI]] — 用 STAR Stories bank、JD 調整與 Transcript 回饋建立面試練習循環。
 - [[Backend Engineering Interview Practice]] — 以資料建模、API contract 與 full-stack reliability 題目練習 Backend system design 回答。
   - [[PostgreSQL Schema Tradeoff Interview Practice]] — 練習 normalization、historical snapshot、JSONB 與 database invariants 的取捨。
   - [[Async API Contract Interview Practice]] — 練習 async resource、partial success、HTTP semantics 與 idempotency。
   - [[Full-stack Error Handling Interview Practice]] — 練習 client／worker retry、durable job、outbox、recovery 與 observability。
+  - [[High-Concurrency Coupon Claim Interview Practice]] — 以限量折價券練習 invariant、atomic update、row lock、unique constraint、transaction 與 idempotency 的責任分層。
 - [[Remote Codex with Self-hosted Runner]] — 透過 GitHub Actions self-hosted runner 遠端觸發本機 CLI 工作流程。
 
 ## Frontend Engineering
@@ -64,6 +66,7 @@
 - [[Kubernetes Architecture and Debugging]] — 串起 Cluster、Node Pool、Pod、Deployment、Service、DNS、rollout 與 debug。
 - [[Google Cloud Functions]] — Travel Split 驗證 Cloudflare-issued credential、Expense App 驗證 Supabase JWT 並承接 AI operations 的 serverless backend。
 - [[Google Cloud Storage]] — 以短效 Signed URL 讓 Client 直接上傳待分析收據圖片的 Object Storage。
+- [[Backend Service Production Readiness]] — 以 MVP scope、release gates、readiness scorecard、SLO 與 metrics 判斷 Backend service 是否能安全上線及持續營運。
 
 ## Security and Identity
 
@@ -79,6 +82,7 @@
 
 - [[SQL vs NoSQL]] — 從資料關係、Access pattern、Transaction、Scale 與維護成本比較資料庫模型。
 - [[PostgreSQL Relational Data Modeling]] — 比較 normalized relation、historical snapshot 與 JSONB 的完整性、查詢和併發取捨。
+- [[PostgreSQL Concurrency Control]] — 由 invariant 出發，選擇 constraint、conditional atomic update、row lock、optimistic locking 或 serializable transaction。
 - [[Database Unique Constraint]] — 用 single／composite uniqueness、database concurrency arbitration 與 conflict handling 保護核心資料規則。
 - [[Supabase]] — Expense App 使用的 PostgreSQL-based Backend as a Service，以及其 Auth、JWT 與資料存取邊界。
 - [[System Design Foundations]] — 從單機擴展到 Load balancing、Cache、Queue、Replication、Statelessness 與 Sharding。

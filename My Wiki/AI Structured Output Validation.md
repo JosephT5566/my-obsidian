@@ -114,9 +114,11 @@ Receipt / OCR (untrusted)
 - [[Expense Draft Review Workflow]]
 - [[AI Agent Architecture]]
 - [[API Contract Design]]
+- [[Backend Service Production Readiness]]
 
 ## References
 
 - [[2026-07-26 weekly updates]]
+- [[2026-08-02 weekly updates]]
 - [OpenAI API: Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs)
 - [OWASP: Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)

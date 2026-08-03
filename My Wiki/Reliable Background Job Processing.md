@@ -31,7 +31,7 @@ queued → processing → completed
 
 ### Claim 與 Recovery
 
-多個 worker 使用 conditional update 或 `SELECT ... FOR UPDATE SKIP LOCKED` atomic claim。Worker crash 後，[[Lease-Based Job Recovery|lease 與 sweeper]] 透過 time-bounded ownership、fencing generation 和原子回收，讓其他 worker 能安全接手過久的 queued job 與 lease-expired processing job。
+多個 worker 依 [[PostgreSQL Concurrency Control]] 使用 conditional update 或 `SELECT ... FOR UPDATE SKIP LOCKED` atomic claim。Worker crash 後，[[Lease-Based Job Recovery|lease 與 sweeper]] 透過 time-bounded ownership、fencing generation 和原子回收，讓其他 worker 能安全接手過久的 queued job 與 lease-expired processing job。
 
 ### Retry
 
@@ -66,6 +66,7 @@ API transaction → business row + job row → commit → worker claim
 - [[Expense Receipt AI Pipeline]]
 - [[Expense Draft Review Workflow]]
 - [[Transactional Outbox]]
+- [[PostgreSQL Concurrency Control]]
 - [[System Design Foundations]]
 
 ## References

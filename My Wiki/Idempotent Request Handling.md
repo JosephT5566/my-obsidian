@@ -73,6 +73,7 @@ Provider 已成功完成解析
 - [[API Contract Design]]
 - [[Reliable Background Job Processing]]
 - [[Transactional Outbox]]
+- [[PostgreSQL Concurrency Control]]
 
 ## References
 

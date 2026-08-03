@@ -40,6 +40,7 @@ User request
 - MCP 降低多個 Client 重複整合工具的成本，也增加 Server lifecycle 與信任邊界。
 - Skill 的 Progressive disclosure 節省 Context window，但 Metadata 品質會影響是否正確啟用。
 - Agent 自主性越高，越需要清楚的 Scope、Approval 與 Verification。
+- 長期 context 應以 [[AI Development Memory|Repo／Shared Project／Session Memory]] 分層管理，避免把 chat history 當成 source of truth。
 
 ## Related
 
@@ -47,9 +48,11 @@ User request
 - [[AI Structured Output Validation]]
 - [[Interview Preparation with AI]]
 - [[Remote Codex with Self-hosted Runner]]
+- [[AI Development Memory]]
 
 ## References
 
 - [[2026-05-24 - 5-24 weekly update]]
 - [[2026-07-26 weekly updates]]
+- [[2026-08-02 weekly updates]]
 - [Model Context Protocol](https://modelcontextprotocol.io/)

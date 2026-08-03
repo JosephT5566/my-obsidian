@@ -45,12 +45,14 @@ FROM jsonb_array_elements($1::jsonb) AS share;
 - JSONB 提供 schema flexibility，代價是型別、關係、更新衝突與查詢複雜度。
 - Middleware 適合 request shape 與友善錯誤；database constraint 保護核心 invariant；trigger 處理一般 constraint 無法表達、但所有寫入路徑都必須成立的規則。
 - 跨多 rows 的寫入使用 transaction 與必要的 row lock，避免只完成一部分或在 concurrent update 下發生 lost update。
+- Invariant 受 concurrent writes 影響時，依 [[PostgreSQL Concurrency Control]] 選擇 constraint、conditional update、row lock 或 serializable transaction。
 
 ## Related
 
 - [[PostgreSQL Schema Tradeoff Interview Practice]]
 - [[Database Unique Constraint]]
 - [[PostgreSQL Row-Level Security]]
+- [[PostgreSQL Concurrency Control]]
 - [[SQL vs NoSQL]]
 - [[Supabase]]
 - [[Distributed Transactions - 2PC and Saga]]
